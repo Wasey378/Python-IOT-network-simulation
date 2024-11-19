@@ -1,0 +1,14 @@
+<decoder name="medium">
+  <prematch>^Medium:</prematch>
+</decoder>
+<decoder name="medium_child">
+  <parent>medium</parent>
+  <regex offset="after_parent ">^\s(\.+) is</regex>
+  <order>company</order>
+</decoder>
+
+<decoder name="json_with_mal">
+  <parent>json</parent>
+  <regex offset="after_parent">"mal" : "0000"</regex>
+  <order>mal_present</order>
+</decoder>
